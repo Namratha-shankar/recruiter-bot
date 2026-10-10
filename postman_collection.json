@@ -1,0 +1,220 @@
+{
+  "info": {
+    "_postman_id": "4e2aaa84-ea1f-452d-8439-1d822018cbee",
+    "name": "Recruiter Bot",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53339357",
+    "_collection_link": "https://go.postman.co/collection/53339357-4e2aaa84-ea1f-452d-8439-1d822018cbee?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Error: invalid id (400)",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "   {}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/jobs/abc/matches",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "jobs",
+            "abc",
+            "matches"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error: job not found (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/jobs/999/matches",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "jobs",
+            "999",
+            "matches"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add job",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\r\n     \"title\": \"Security Analyst\",\r\n     \"min_experience\": 2,\r\n     \"required_skills\": [\"security\", \"research\"],\r\n     \"culture_keywords\": [\"curious\"]\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/jobs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "jobs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Recompute matches",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/recompute",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "recompute"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Seed database",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/seed",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "seed"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add candidate",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\r\n     \"name\": \"Jessica J.\",\r\n     \"experience_years\": 6,\r\n     \"availability\": \"Immediate\",\r\n     \"skills\": [\"deduction\", \"pattern-recognition\", \"forensics\"],\r\n     \"traits\": [\"analytical\", \"autonomous\"]\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/candidates",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "candidates"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "job matches",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/jobs/1/matches",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "jobs",
+            "1",
+            "matches"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Candidate matches",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/candidates/1/matches",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "candidates",
+            "1",
+            "matches"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
