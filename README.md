@@ -361,7 +361,7 @@ In Q4, `no_show` and pending (`NULL`) Finals count in the denominator but not as
 ## AI tools
 
 I used an AI assistant (Claude) while working on this project, for scaffolding and drafting the project
-structure, the schema, the SQL, the tests and this README.
+structure.
 
 **What I did myself:** I ran the project on my own machine, fixed
 setup problems, tested every endpoint in Postman, changed the weights and watched how the rankings moved,
